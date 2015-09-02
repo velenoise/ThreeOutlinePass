@@ -1,0 +1,24 @@
+{
+  "name": "toonOutline",
+  "version": "1.0.0",
+  "description": "Toon outline pass for three.js effect composer. Browserify friendly. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "budo ./src/js/index.js:./js/bundle.js --dir test --live -v -t glslify | garnish",
+    "build": "browserify ./src/js/passes/outline-pass/index.js -t glslify | uglifyjs --keep-fnames -cm > build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "budo": "^4.2.1",
+    "garnish": "^2.3.0",
+    "glslify": "^2.2.1",
+    "three-glslify": "^2.0.1",
+    "uglify-js": "^2.4.24"
+  },
+  "dependencies": {
+    "three": "^0.71.1",
+    "three-effectcomposer": "0.0.1"
+  }
+}
